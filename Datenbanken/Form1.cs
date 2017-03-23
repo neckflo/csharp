@@ -20,6 +20,11 @@ namespace Datenbanken
         OleDbCommand command;
         
         //testtdytdftgdc;
+        //test
+        //Auskommentiert
+       
+
+
         public Form1()
         {
             InitializeComponent();
@@ -30,10 +35,11 @@ namespace Datenbanken
         private void button1_Click(object sender, EventArgs e)
         {
               
-                OleDbConnectionStringBuilder strgbild = new OleDbConnectionStringBuilder();
-                strgbild.DataSource = "Bestellung.accdb";
-                strgbild.Provider = "Microsoft.ACE.OLEDB.12.0";
-                con.ConnectionString = strgbild.ConnectionString;
+                //OleDbConnectionStringBuilder strgbild = new OleDbConnectionStringBuilder();
+                //strgbild.DataSource = "Bestellung.accdb";
+                //strgbild.Provider = "Microsoft.ACE.OLEDB.12.0";
+            
+                con.ConnectionString = Properties.Settings.Default.DBConnection;
             try
             {
                 con.Open();
